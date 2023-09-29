@@ -10,7 +10,13 @@ pipeline {
                     branch: 'main'
             }
         }
-        
+        stage('Maven Build') {
+            steps {
+                script {
+                    sh 'mvn package'
+                }
+            }
+        }
         stage('Docker Build') {
             steps {
                 // Build the Docker image
