@@ -5,7 +5,7 @@ pipeline {
             steps {
                 // Deploy the Docker container
                 script {
-                    sh 'docker run -d -p 80:8082 --name my-app-container nginx'
+                    sh 'docker run -d -p 8082:80 --name my-app-container nginx'
                 }
             }
         }
