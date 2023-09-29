@@ -9,7 +9,14 @@ pipeline {
                     branch: 'main'
             }
         }
-        
+        stage('Docker Build') {
+            steps {
+                // Build the Docker image
+                script {
+                    sh 'docker build -t nginx -f Dockerfile2 .'
+                }
+            }
+        }
         stage('Remove Existing Container') {
             steps {
                 script {
