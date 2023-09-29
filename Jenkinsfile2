@@ -1,6 +1,14 @@
 pipeline {
     agent any
     stages {
+        stage('Remove Existing Container') {
+            steps {
+                script {
+                    sh 'docker stop my-app-container || true' // Stop the container if it exists, ignore errors
+                    sh 'docker rm my-app-container || true'  // Remove the container if it exists, ignore errors
+                }
+            }
+        }
         stage('dockerrun') {
             steps {
                 // Deploy the Docker container
