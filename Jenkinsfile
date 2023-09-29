@@ -24,7 +24,7 @@ pipeline {
             steps {
                 // Deploy the Docker container
                 script {
-                    sh 'docker run -it -p 8080:8080 --name my-app-container my-app:0.1'
+                    sh 'docker run -it -p 8080:8082 --name my-app-container my-app:0.1'
                 }
             }
         }
