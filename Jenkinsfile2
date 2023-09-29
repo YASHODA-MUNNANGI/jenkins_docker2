@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('dockerrun') {
+            steps {
+                // Deploy the Docker container
+                script {
+                    sh 'docker run -d -p 80:8082 --name my-app-container nginx'
+                }
+            }
+        }
+    }
+}
