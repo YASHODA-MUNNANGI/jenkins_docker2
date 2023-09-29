@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Build the Docker image
                 script {
-                    sh 'docker build -t my-app:${env.BUILD_ID} -f Dockerfile2 .'
+                    sh 'docker build -t my-app -f Dockerfile2 .'
                 }
             }
         }
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 // Deploy the Docker container
                 script {
-                    sh 'docker run -d -p 8082:80 --name my-app-container my-app:${env.BUILD_ID}'
+                    sh 'docker run -d -p 8082:80 --name my-app-container my-app'
                 }
             }
         }
