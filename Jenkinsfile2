@@ -29,7 +29,7 @@ pipeline {
             steps {
                 // Deploy the Docker container
                 script {
-                    sh 'docker run -d -p 8082:80 --name my-app-container my-app'
+                    sh 'docker run -d -p 8083:80 --name my-app-container my-app'
                 }
             }
         }
