@@ -1,6 +1,7 @@
 # A Containerized Hello World Java deployment with Docker 
 <<<<<<< HEAD
 welcome
+cherrypick
 =======
 Hi
 >>>>>>> 34bb278 (added)
