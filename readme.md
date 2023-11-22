@@ -1,5 +1,9 @@
 # A Containerized Hello World Java deployment with Docker 
-Hi stash tag cherrypick
+<<<<<<< HEAD
+welcome
+=======
+Hi
+>>>>>>> 34bb278 (added)
 a very simple rest-api-hello-world java application with Spring Boot and Maven, containerized with dockerfile, ready to build and deployed with a very simple way.
 
 ## How to Build
